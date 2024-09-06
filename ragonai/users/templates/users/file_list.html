@@ -1,0 +1,8 @@
+<h2>Your Uploaded Files</h2>
+<ul>
+    {% for file in files %}
+        <li>{{ file.file.name }} (Uploaded on {{ file.uploaded_at }})</li>
+    {% empty %}
+        <li>No files uploaded yet.</li>
+    {% endfor %}
+</ul>
